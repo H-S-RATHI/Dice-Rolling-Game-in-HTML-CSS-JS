@@ -1,4 +1,3 @@
-
 let player1Score = 0;
 let player2Score = 0;
 let player1Turn = true;
@@ -27,7 +26,7 @@ rollBtn.addEventListener("click", function(){
         player1Dice.textContent = rondomNumber
         player1Dice.classList.remove("active")
         player2Dice.classList.add("active")
-        message.textContent = "Computer"
+        message.textContent = "Player 2 Turn"
 
 
     }else{
@@ -36,7 +35,7 @@ rollBtn.addEventListener("click", function(){
         player2Dice.textContent = rondomNumber
         player2Dice.classList.remove("active")
         player1Dice.classList.add("active")
-        message.textContent = "You"
+        message.textContent = "Player 1 Turn"
     }
 
     // if(player1Turn){
@@ -46,10 +45,10 @@ rollBtn.addEventListener("click", function(){
     // }
 
     if(player1Score >= 20){
-        message.textContent = "you won!"
+        message.textContent = "Player 1 Won!"
         showDisplayButton()
     }else if(player2Score >= 20){
-        message.textContent = "computer won !"
+        message.textContent = "Player 2 Won!"
         showDisplayButton()
     }
 
@@ -62,7 +61,7 @@ resetBtn.addEventListener("click", function(){
 
 function reset(){
     
-    message.textContent = "player 1 turn"
+    message.textContent = "Player 1 Turn"
     player1Scoreboard.textContent = 0 
     player2Scoreboard.textContent = 0;
     player1Dice.textContent = '-'

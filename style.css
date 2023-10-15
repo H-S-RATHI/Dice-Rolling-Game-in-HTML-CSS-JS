@@ -1,32 +1,43 @@
 /* Reset some default styles */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #200f42;
+}
 body, h1, h2, button {
     margin: 0;
     padding: 0;
-    background-color: rgb(221, 0, 255);
+    background-color:    #fd749d;
 }
 
 /* Apply a background color and styles to the container */
 .container {
-    width:50%;
-    margin: auto;
-    margin-top: 100px;
+    width:30%;
+    padding-top: 0;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    height: 50vh;
-    background-color: #e8e675;
+    height: 60vh; 
+    background-color: #ece9e9;
+    border-radius: 10%;
     font-family: Arial, sans-serif;
-    border:5px double green;
+    border: 15px solid #32657b;
 }
 
 /* Style the title */
-h1 {
+
+
+.players h1 {
     font-size: 24px;
     margin-bottom: 20px;
+    padding: 10px;
+    border: 5px solid #408a7d;
+    border-radius: 20px;
+    background-color: #ff8bde;
 }
 
-/* Style the dice container */
 .players {
     display: flex;
     justify-content: space-around;
@@ -38,14 +49,12 @@ h1 {
 #player1, #player2 {
     text-align: center;
 }
-
 /* Style the dice */
 .dice {
     font-size: 48px;
     padding: 10px 20px;
-    background-color: #fff;
-    border: 2px solid #333;
-    border-radius: 5px;
+    border: 5px solid #82469e;
+    border-radius: 20px;
     margin-bottom: 10px;
 }
 
@@ -58,18 +67,16 @@ h1 {
 /* Style the buttons */
 .btnbox {
     display: flex;
-    justify-content: center;
-    background-color: aqua;
+    justify-content: space-around;
 }
 
 button {
     font-size: 36px;
-    padding: 10px 20px;
+    padding: 5px 10px 7px 10px;
     margin: 0 10px;
-    border: none;
-    background-color: #333;
-    color: #fff;
-    border-radius: 5px;
+    border: 5px solid #82469e;
+    border-radius: 20px;
+    background-color: transparent;
     cursor: pointer;
 }
 
@@ -77,8 +84,26 @@ button:hover {
     background-color: #555;
 }
 
-/* Style the message */
 #message {
     font-size: 24px;
     font-weight: bold;
+    margin: -30px 0 30px 0;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+    color: #000;
+}
+
+@media screen and (max-width:1024px){
+    .container{
+        width: 50%;
+    }
+}
+
+@media screen and (max-width:600px){
+    .container{
+        height: 50vh;
+        width:70%;
+    }
 }
